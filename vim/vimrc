@@ -1,19 +1,39 @@
 
 :let mapleader = ","
 
-:map <leader>w :w <ENTER> 
-
-:map <leader>mk :w <ENTER> :make <ENTER> 
-
-:set textwidth=79
-:set colorcolumn=+1
-
-:set nu
-:set relativenumber
+set paste
+set textwidth=79
+set colorcolumn=+1
 
 hi Comment ctermfg=Magenta
 hi Search cterm=NONE ctermfg=black ctermbg=cyan
 
-:set hlsearch
+set guifont=Monospace\10
 
+" Status Line Setup
+set statusline=%F
+set statusline+==%=
+set statusline+=%c,%l/%L
+set laststatus=2
+
+" Searching
+set incsearch
+set hlsearch
+
+" Write
+nnoremap <leader>w :w <ENTER> 
+
+" Run Make
+nnoremap <leader>mk :w <ENTER> :make <ENTER> 
+
+" Explore
+nnoremap<leader>se :Sexplore<cr>
+nnoremap<leader>ve :Vexplore<cr>
+
+" Line Numbers
+nnoremap<leader>ln :set nu!<cr>
+nnoremap<leader>rln :set relativenumber!<cr>
+
+set nu
+set relativenumber
 
