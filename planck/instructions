@@ -1,0 +1,4 @@
+
+cd to qmk_firmware
+>>> qmk flash -c gary_planck_drop.json
+
